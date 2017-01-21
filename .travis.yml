@@ -16,5 +16,4 @@ before_install:
   -in travis_key.enc -out travis_key -d
 after_success:
 - chmod 600 travis_key
-- mv travis_key ~/.ssh/id_rsa
 - scp -r -i travis_key ./public travis@2mih.com:/home/travis/
